@@ -25,10 +25,27 @@ class Database:
 
         return tasks
 
-    def delete_task(self, _id: int):
+    def delete_task(self, _id: int) -> None:
         self.sql.execute(f"DELETE FROM tasks WHERE id={_id}")
         self.db.commit()
         print(f"[i] Task number {_id} deleted successfully.")
+
+    def create_shoping(self, title: str) -> None:
+        self.sql.execute(f"INSERT INTO shoping (title) VALUES ('{title}')")
+        self.db.commit()
+        print(f"[i] Shoping \"{title}\" Created successfully!")
+
+    def get_shoping(self) -> list:
+        self.sql.execute("SELECT * FROM shoping")
+        shoping = self.sql.fetchall()
+        print("[i] Shoping loaded.")
+
+        return shoping
+
+    def delete_shoping(self, _id: int) -> None:
+        self.sql.execute(f"DELETE FROM tasks WHERE id={_id}")
+        self.db.commit()
+        print(f"[i] Shoping number {_id} deleted successfully.")
 
 
 if __name__ == "__main__":
