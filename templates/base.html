@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__container">
+                <div class="header__menu">
+                    <ul class="header__menu__list">
+                       <li class="header__menu__link">Home</li> 
+                       <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__logo">
+                       <li class="header__menu__link">My Lists</li> 
+                    </ul>
+                </div>
+                
 
-    {% block content %} фыв1312312{% endblock %}
+            </div>
+        </div>
 
+        <main class="main">sadasder235r23r23r2r2</main>
+        <div class="footer"></div>
+    </div>
 </body>
 
 </html>
