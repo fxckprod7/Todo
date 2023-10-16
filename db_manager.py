@@ -43,7 +43,7 @@ class Database:
         return shoping
 
     def delete_shoping(self, _id: int) -> None:
-        self.sql.execute(f"DELETE FROM tasks WHERE id={_id}")
+        self.sql.execute(f"DELETE FROM shoping WHERE id={_id}")
         self.db.commit()
         print(f"[i] Shoping number {_id} deleted successfully.")
 
