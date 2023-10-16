@@ -3,3 +3,55 @@
     {% block title %} Todo | Home {% endblock %}
 
 
+{% block content %} 
+
+    <main class="main">
+        <section class="menu-choosing">
+            <div class="container">
+                <div class="menu-choosing__menu-bar">
+                    <div class="menu-choosing__menu-bar__item left-button" onmouseover="showImage('left')" onmouseout="hideImage('left')"><h2>To-Do List</h2></div>
+                    <div class="menu-choosing__menu-bar__item right-button" onmouseover="showImage('right')" onmouseout="hideImage('right')"><h2>Shopping List</h2></div>
+
+                    
+                </div>
+                <div class="image-container" id="left-image">
+                    <img src="{{ url_for('static', filename='img/to-do-list.png' ) }}" alt="Left Image">
+                </div>
+                <div class="image-container" id="right-image">
+                    <img src="{{ url_for('static', filename='img/to-do-list.png' ) }}" alt="Right Image">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="list">
+            <div class="container">
+                <div class="list__main-block">
+                    <div class="list__main-block__shopping">
+                        <h1>Shopping List</h1>
+                        <form class="list__main-block__shopping__input-block" >
+                            <input type="text" class="shopping__input-title" placeholder="To fill your shopping list, write and click `Add`" required>
+                            <button class="input__add" type="submit">Add</button>
+                        </form>
+
+                        <ol class="list__main-block__shopping__list">
+                            <!-- <p class="clear-list">Your list is clear now.</p> -->
+
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                            <li class="list__main-block__shopping__list__item">Untitled <i class="mdi mdi-checkbox-marked-circle-outline checkmark__"></i></li>
+                        </ol>
+                    </div>
+                    <div class="list__main-block__shopping" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock%}
