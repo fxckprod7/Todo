@@ -11,6 +11,14 @@ body{
 /* ------------------COLORS-------------------------------------------------------- */
 $baseColor: #fffb01;
 $accentColor: #003459;
+
+$menu-bar-bRadius: 25px;
+/* -------------------CONTAINER------------------------------------------------------- */
+.container{
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
 /* -----------------------HEADER--------------------------------------------------- */
 .wrapper{
     display: flex;
@@ -227,6 +235,107 @@ $accentColor: #003459;
     .main{
         flex: 1 1 auto;
         min-height: 100vh;
+
+        /* -------------menu choosing------------------------------------------------------------- */
+        .menu-choosing{
+            padding: 130px 0px 0px 0px;
+
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                            not supported by any browser */
+            &__menu-bar{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border: 2px solid rgb(49, 13, 114);
+                border-radius: $menu-bar-bRadius;
+                &__item{
+                    &:hover{
+                        background-color: #002559;
+                    }
+                    transition: all 0.2s ease-in;
+                    width: 100%;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    &:first-child{
+                        border-top-left-radius: $menu-bar-bRadius;
+                        border-bottom-left-radius: $menu-bar-bRadius;
+                    }
+                    &:last-child{
+                        border-top-right-radius: $menu-bar-bRadius;
+                        border-bottom-right-radius: $menu-bar-bRadius;
+                    }
+                    &:not(:last-child){
+                        border-right: 2px solid rgb(49, 13, 114);
+                    }
+                    h2{
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: #fff;
+                        text-align: center;
+                        font-family: 'YatraOne';
+                    }
+                }
+                
+            }
+            .image-container {
+                display: none;
+                position: fixed;
+                top: 40%;
+                transform: translateY(-50%) translateZ(0);
+
+                img{
+                    width: 400px;
+                }
+            }
+            @keyframes slideInRight {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            @keyframes slideOutRight {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+            
+
+            @keyframes slideInLeft {
+                0% {
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes slideOutLeft {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+            
+            #right-image{
+                right: 0;
+            }
+            #left-image{
+                left: 0;
+            }
+        }
+
     }
     .footer{
         border: 1px solid #fff;

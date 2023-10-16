@@ -32,7 +32,23 @@
         </header>
 
         <main class="main">
-            <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__menu__body__list__logo" width="200px" style="margin-top: 150px;">
+            <section class="menu-choosing">
+                <div class="container">
+                    <div class="menu-choosing__menu-bar">
+                        <div class="menu-choosing__menu-bar__item left-button" onmouseover="showImage('left')" onmouseout="hideImage('left')"><h2>To-Do List</h2></div>
+                        <div class="menu-choosing__menu-bar__item right-button" onmouseover="showImage('right')" onmouseout="hideImage('right')"><h2>Shopping List</h2></div>
+
+                        
+                    </div>
+                    <div class="image-container" id="left-image">
+                        <img src="{{ url_for('static', filename='img/to-do-list.png' ) }}" alt="Left Image">
+                    </div>
+                    <div class="image-container" id="right-image">
+                        <img src="{{ url_for('static', filename='img/to-do-list.png' ) }}" alt="Right Image">
+                    </div>
+                </div>
+            </section>
+            <section>asdfasfas</section>
         </main>
 
         <!-- <div class="footer">footer</div> -->
