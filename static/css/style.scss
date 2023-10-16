@@ -2,11 +2,16 @@
 body{
     
 }
-
+/* ------------FONTS-------------------------------------------------------------- */
+@font-face {
+    font-family: 'YatraOne';
+    font-weight: 500;
+    src: url(../fonts/YatraOne-Regular.ttf);
+}
 /* ------------------COLORS-------------------------------------------------------- */
 $baseColor: #fffb01;
 $accentColor: #003459;
-/* -----------------------ШЛЯПА--------------------------------------------------- */
+/* -----------------------HEADER--------------------------------------------------- */
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -87,8 +92,9 @@ $accentColor: #003459;
                     &__link{
                         position: relative;
                         font-size: 16px;
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        font-weight: 600;
+                        font-family: 'YatraOne';
+
+                        font-weight: 700;
                         cursor: pointer;
                         padding: 24px 0px;
                         color: #fff;
