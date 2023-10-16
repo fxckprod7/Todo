@@ -76,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgb(255, 255, 255);
   position: fixed;
   z-index: 10;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */ /* Konqueror */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+   not supported by any browser */
 }
 .wrapper .header__container {
   max-width: 1230px;
