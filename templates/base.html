@@ -2,30 +2,43 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+    
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
             <div class="header__container">
                 <div class="header__menu">
-                    <ul class="header__menu__list">
-                       <li class="header__menu__link">Home</li> 
-                       <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__logo">
-                       <li class="header__menu__link">My Lists</li> 
-                    </ul>
+                    <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__menu__body__list__logo2">
+                    <div class="header__menu__icon">
+                        <span></span>
+                    </div>
+
+                    <nav class="header__menu__body">
+                        <ul class="header__menu__body__list">
+                            <li class="header__menu__body__link">Home</li> 
+                            <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__menu__body__list__logo">
+                            <li class="header__menu__body__link">My Lists</li> 
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
+        </header>
 
         <main class="main">
-
+            <img src="{{ url_for('static', filename='img/LoGO.png' ) }}" alt="" class="header__menu__body__list__logo" width="200px" style="margin-top: 150px;">
         </main>
-        <div class="footer">footer</div>
+
+        <!-- <div class="footer">footer</div> -->
     </div>
+
+
+    <script src="{{ url_for('static', filename='js/main.js' ) }}"></script>
 </body>
 
 </html>
