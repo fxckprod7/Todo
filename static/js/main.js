@@ -2,9 +2,9 @@
 
 /* --------------------------BURGER------------------------------------------------ */
 const iconMenu = document.querySelector('.header__menu__icon');
-if (iconMenu){
+if (iconMenu) {
     const menuBody = document.querySelector('.header__menu__body');
-    iconMenu.addEventListener("click", function (e){
+    iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
@@ -33,14 +33,14 @@ function hideImage(side) {
         if (side === 'left') {
             let leftImage = document.getElementById('left-image');
             leftImage.style.animation = "slideOutLeft 1s forwards";
-            setTimeout(function() {
+            setTimeout(function () {
                 leftImage.style.animation = '';
             }, endless);
-        } 
+        }
         else if (side === 'right') {
             let rightImage = document.getElementById('right-image');
             rightImage.style.animation = "slideOutRight 1s forwards";
-            setTimeout(function() {
+            setTimeout(function () {
                 rightImage.style.animation = '';
             }, endless);
         }
