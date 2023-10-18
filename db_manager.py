@@ -4,7 +4,7 @@ import sqlite3
 class Database:
 
     def __init__(self, db_path: str) -> None:
-        self.db = sqlite3.connect(db_path)
+        self.db = sqlite3.connect(db_path, check_same_thread=False)
         self.sql = self.db.cursor()
 
     def create_task(self, title: str, description: str) -> None:
