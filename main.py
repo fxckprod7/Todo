@@ -16,8 +16,7 @@ def page_not_found(error):
 
 @app.route('/')
 def index():
-    # shoping_tasks = db.get_shoping()
-    shoping_tasks = ""
+    shoping_tasks = db.get_shoping()
     return render_template("index.html", shoping_tasks=shoping_tasks)
 
 
