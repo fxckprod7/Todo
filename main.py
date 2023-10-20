@@ -32,4 +32,4 @@ def create_shoping_item():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, port=5000)
+    app.run(debug=True, port=5000)
